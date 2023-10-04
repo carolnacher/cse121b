@@ -17,7 +17,7 @@ function addNumber() {
 document.querySelector('#addNumbers').addEventListener('click', addNumber);
 
 /* Function Expression - Subtract Numbers */
-function subtract(number1, number2) {
+const subtract= function (number1, number2) {
     return number1-number2;
 }
 
@@ -32,16 +32,21 @@ function subtractNumber() {
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumber);
 
 /* Arrow Function - Multiply Numbers */
-function multiply(number1, number2) {
-    return number1*number2;
-}
+
+const multiply = (number1, number2) => number1 * number2;
 
 function multiplyNumber() {
 
     let number1 = Number(document.querySelector('#factor1').value);
     let number2 = Number(document.querySelector('#factor2').value);
 
+    const result = multiply(number1, number2);
+
+    document.querySelector('#product').value = result;
+
     document.querySelector('#product').value=multiply(number1,number2);
+    
+    
 }
 
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumber);
