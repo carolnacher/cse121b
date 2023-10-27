@@ -1,0 +1,85 @@
+/* Estilos predeterminados */
+#name {
+  font-size: 2.5em;
+  color: #333;
+}
+
+#title {
+  font-size: 1.5em;
+  color: #777;
+}
+
+#work-link {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+#profile-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos dinámicos para cambiar cuando se cargue la página */
+#home.loaded #name {
+  color: #FF9900; /* Cambia el color del nombre cuando se carga la página */
+}
+
+#home.loaded #title {
+  color: #777; /* Cambia el color del título cuando se carga la página */
+}
+
+#home.loaded #work-link {
+  background-color: #FF9900; /* Cambia el color de fondo del enlace cuando se carga la página */
+}
+
+#home.loaded #profile-image {
+  border: 5px solid #FF9900; /* Agrega un borde alrededor de la imagen cuando se carga la página */
+}
+#home  .panel{
+  margin-top: 800;
+}
+/* Agrega un fondo amarillo al artículo */
+.yellow-bg {
+  background-color: rgb(210, 210, 2);
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.yellow-bg h1, .filter-dropdown{
+  margin: 10px; /* Agrega espacio entre el h1 y el p */
+}
+
+/* Cambia el estilo del botón al pasar el mouse sobre él */
+.scroll-button:hover {
+  background-color: #1b1c1c; /* Color de fondo al pasar el mouse */
+}
+.scroll-button {
+  background-color: #484949;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  top: 59%; /* Coloca el botón en la mitad superior del contenedor */
+  left: 58%; /* Lo centra horizontalmente */
+  transform: translate(100%, -500%); /* Centra verticalmente */
+}
+.jumplink.pic {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Estilos para la imagen del cello */
+.jumplink.pic img {
+  max-width: 100%; /* Ajusta el ancho de la imagen según tus preferencias */
+}
+header{
+  margin: 0%;
+}
