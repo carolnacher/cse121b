@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ejemplo de uso de Fetch con la API de Deezer</title>
+</head>
+<body>
+  <h1>Información del Artista de Deezer</h1>
+  <div id="artist-info">
+    <!-- Los datos del artista se mostrarán aquí -->
+  </div>
+
+  <script>
+    // Función para realizar la solicitud a la API de Deezer
+    function fetchDeezerData() {
+      fetch('https://api.deezer.com/artist/27') // Cambia el ID del artista según tus necesidades
+        .then(response => response.json())
+        .then(data => {
+          // Trabaja con los datos obtenidos de la API de Deezer
+          const artistInfo = document.getElementById('artist-info');
+          artistInfo.innerHTML = `
+            <h2>${data.name}</h2>
+            <p>Número de álbumes: ${data.nb_album}</p>
+            <p>Número de seguidores: ${data.nb_fan}</p>
+            <p><a href="${data.link}" target="_blank">Ver perfil del artista</a></p>
+          `;
+        })
+        .catch(error => {
+          console.error('Hubo un error al obtener datos de la API de Deezer: ', error);
+        });
+    }
+
+    // Llama a la función cuando se cargue la página
+    window.onload = fetchDeezerData;
+  </script>
+</body>
+</html>
